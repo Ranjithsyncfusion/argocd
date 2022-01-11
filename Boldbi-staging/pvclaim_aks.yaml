@@ -28,7 +28,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
- name: bold-fileserver-claim
+ name: bold-fileserver-claim-test
  namespace: boldbi-test
 spec:
  accessModes:
