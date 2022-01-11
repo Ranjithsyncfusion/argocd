@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: bold-azure-secret
+  namespace: boldbi-dev
+type: Opaque
+data:
+  azurestorageaccountname: dGVycmFmb3Jtc3RvcmFnZWF6dXJl
+  azurestorageaccountkey: cTFUcHpGWkUxU2I0dlJUYUd2Q2VQS29yeWFVVjFGamlIc1BoR0NtUWswWWZtZStoSXhyais5bXFrUkZmTTZ5Wmw0Q05vS1BKN2Q3WW1UL2lPdVpJNWc9PQ==
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+ name: bold-fileserver
+ namespace: boldbi-dev
+spec:
+ capacity:
+   storage: 3Gi
+ accessModes:
+ - ReadWriteMany
+ persistentVolumeReclaimPolicy: Retain
+ storageClassName: azurefile
+ azureFile:
+   secretName: bold-azure-secret
+   shareName: sharename
+   readOnly: false
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+ name: bold-fileserver-claim
+ namespace: boldbi-dev
+spec:
+ accessModes:
+ - ReadWriteMany
+ storageClassName: azurefile
+ volumeName: bold-fileserver
+ resources:
+   requests:
+     storage: 3Gi
