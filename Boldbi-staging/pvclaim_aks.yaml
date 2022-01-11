@@ -11,7 +11,7 @@ data:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
- name: bold-fileserver
+ name: bold-fileserver-test
  namespace: boldbi-test
 spec:
  capacity:
