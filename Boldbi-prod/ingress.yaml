@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1beta1
 kind: Ingress
 metadata:
-  name: bold-ingress
+  name: bold-ingress2
   namespace: boldbi-prod
   annotations:
     kubernetes.io/ingress.class: nginx
@@ -26,7 +26,7 @@ metadata:
       
       location ~* "^/bi/api(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/biapi6005/bi/api(/|${literal_dollar})(.*)";
@@ -93,7 +93,7 @@ metadata:
       
       location ~* "^/bi/jobs(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/bijobs6006/bi/jobs(/|${literal_dollar})(.*)";
@@ -160,7 +160,7 @@ metadata:
       
       location ~* "^/bi/designer(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/bidataservice6007(/|${literal_dollar})(.*)";
@@ -227,7 +227,7 @@ metadata:
       
       location ~* "^/bi(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/biweb6004/bi(/|${literal_dollar})(.*)";
@@ -294,7 +294,7 @@ metadata:
       
       location ~* "^/api(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/idapi6001/api(/|${literal_dollar})(.*)";
@@ -361,7 +361,7 @@ metadata:
       
       location ~* "^/ums(/|$)(.*)" {
         set $namespace      $bold_namespace;
-        set $ingress_name   "bold-ingress";
+        set $ingress_name   "bold-ingress2";
         set $service_name   "";
         set $service_port   "";
         set $location_path  "/idums6002/ums(/|${literal_dollar})(.*)";
