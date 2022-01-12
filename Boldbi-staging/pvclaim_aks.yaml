@@ -28,13 +28,13 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
- name: bold-fileserver-claim-test
+ name: bold-fileserver-claim
  namespace: boldbi-test
 spec:
  accessModes:
  - ReadWriteMany
  storageClassName: azurefile
- volumeName: bold-fileserver
+ volumeName: bold-fileserver-test
  resources:
    requests:
      storage: 3Gi
