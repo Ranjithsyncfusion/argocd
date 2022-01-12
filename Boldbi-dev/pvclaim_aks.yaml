@@ -22,7 +22,7 @@ spec:
  storageClassName: azurefile
  azureFile:
    secretName: bold-azure-secret
-   shareName: sharename
+   shareName: sharename-dev
    readOnly: false
 ---
 apiVersion: v1
