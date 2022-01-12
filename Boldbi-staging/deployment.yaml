@@ -43,7 +43,7 @@ spec:
       volumes:
       - name: id-web-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -98,7 +98,7 @@ spec:
       volumes:
       - name: id-api-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -153,7 +153,7 @@ spec:
       volumes:
       - name: id-ums-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -208,7 +208,7 @@ spec:
       volumes:
       - name: bi-web-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -263,7 +263,7 @@ spec:
       volumes:
       - name: bi-api-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -318,7 +318,7 @@ spec:
       volumes:
       - name: bi-jobs-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
@@ -383,7 +383,7 @@ spec:
       volumes:
       - name: bi-dataservice-volume
         persistentVolumeClaim:
-          claimName: bold-fileserver-claim-test
+          claimName: bold-fileserver-claim
           readOnly: false
       - name: log4net-config-volume
         configMap:
