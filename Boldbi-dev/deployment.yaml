@@ -26,7 +26,7 @@ spec:
         - name: BOLD_SERVICES_HOSTING_ENVIRONMENT
           value: k8s
         - name: APP_BASE_URL
-          value: http://testing.com
+          value: http://host.docker.internal
         - name: INSTALL_OPTIONAL_LIBS
           value: phantomjs,mongodb,mysql,influxdb,snowflake,oracle,npgsql
         readinessProbe:
