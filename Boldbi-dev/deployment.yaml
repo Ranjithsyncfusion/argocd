@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: id-web-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -26,7 +26,7 @@ spec:
         - name: BOLD_SERVICES_HOSTING_ENVIRONMENT
           value: k8s
         - name: APP_BASE_URL
-          value: http://k8smigration-dev.boldbi.com
+          value: http://20.81.11.25
         - name: INSTALL_OPTIONAL_LIBS
           value: phantomjs,mongodb,mysql,influxdb,snowflake,oracle,npgsql
         readinessProbe:
@@ -53,7 +53,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: id-api-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -108,7 +108,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: id-ums-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -163,7 +163,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bi-web-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -218,7 +218,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bi-api-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -273,7 +273,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bi-jobs-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
@@ -328,7 +328,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: bi-dataservice-deployment
-  namespace: boldbi-dev
+  namespace: bold-services
 spec:
   selector:
     matchLabels:
